@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageViewRecord"
+        android:layout_width="189dp"
+        android:layout_marginBottom="30dp"
+        android:layout_height="178dp"
+        android:background="@color/colorPrimaryDark"
+        android:src="@drawable/addimage" />
+
+    <EditText
+        android:id="@+id/edtCategorie"
+        android:hint="Categorie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"/>
+    <EditText
+        android:id="@+id/edtSeverity"
+        android:hint="Severity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"/>
+    <EditText
+        android:id="@+id/edtDescription"
+        android:hint="Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"/>
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:minWidth="180dp"
+        android:text="Update"
+        android:background="@color/colorTextHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

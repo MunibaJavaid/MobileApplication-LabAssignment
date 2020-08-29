@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="208dp"
+            android:layout_height="188dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/colorPrimaryDark"
+            android:src="@drawable/addimage" />
+        <EditText
+            android:id="@+id/edtCategorie"
+            android:layout_below="@id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Categorie"
+            android:layout_centerHorizontal="true"
+            android:ems="15"/>
+        <EditText
+            android:id="@+id/edtSeverity"
+            android:layout_below="@id/edtCategorie"
+            android:hint="Severity"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:ems="15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edtDescription"
+            android:layout_below="@id/edtSeverity"
+            android:hint="Description"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:ems="15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_below="@id/edtDescription"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:minWidth="180dp"
+            android:text="Save Record"
+            android:background="@color/colorTextHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnList"
+            android:layout_below="@id/btnAdd"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:minWidth="180dp"
+            android:text="Record List"
+            android:background="@color/colorTextHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</ScrollView>
