@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         if (set == null) {
             notes.add("Example Note");
         } else {
-            notes = new ArrayList<>(set);         // to bring all the already stored data in the set to the notes ArrayList
+            notes = new ArrayList<>(set);         // stored data in the set to the notes ArrayList
         }
 
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, notes);
@@ -78,54 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-//
-//        listView.setOnLongClickListener(new View.OnLongClickListener() {
-//            @Override
-//            public boolean onLongClick(View v) {
-//                if (mActionMode != null) {
-//                    return false;
-//                }
-//
-//                mActionMode = MainActivity.this.startActionMode(mActionModeCallback);
-//                return true;
-//            }
-//        });
     }
-//    private ActionMode.Callback mActionModeCallback = new ActionMode.Callback() {
-//        public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-//            mode.getMenuInflater().inflate(R.menu.context_menu, menu);
-//            mode.setTitle("Choose your option");
-//            return true;
-//        }
-//        @Override
-//        public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
-//            return false;
-//        }
-//        @Override
-//        public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-//            switch (item.getItemId()) {
-//                case R.id.action_edit:
-//                    Toast.makeText(MainActivity.this, "Option 1 selected", Toast.LENGTH_SHORT).show();
-//                    mode.finish();
-//                    return true;
-//                case R.id.action_delete:
-//                    Toast.makeText(MainActivity.this, "Option 2 selected", Toast.LENGTH_SHORT).show();
-//                    mode.finish();
-//                    return true;
-//                default:
-//                    return false;
-//            }
-//        }
-//        @Override
-//        public void onDestroyActionMode(ActionMode mode) {
-//            mActionMode = null;
-//        }
-//    };
-
-
-
     AbsListView.MultiChoiceModeListener modeListener = new AbsListView.MultiChoiceModeListener() {
         @Override
         public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
@@ -174,45 +127,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
-
-//    public void removeItem(List<String> items){
-//        for (String item : items){
-//            notes.remove(item);
-//        }
-//        arrayAdapter.notifyDataSetChanged();
-//    }
 }
-
-
-//        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id)
-//            {
-//                new AlertDialog.Builder(MainActivity.this)                   // we can't use getApplicationContext() here as we want the activity to be the context, not the application
-//                        .setIcon(android.R.drawable.ic_dialog_alert)
-//                        .setTitle("Delete?")
-//                        .setMessage("Are you sure you want to delete this note?")
-//                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which)                        // to remove the selected note once "Yes" is pressed
-//                            {
-//                                notes.remove(position);
-//                                arrayAdapter.notifyDataSetChanged();
-//
-//                                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.tanay.thunderbird.deathnote", Context.MODE_PRIVATE);
-//                                HashSet<String> set = new HashSet<>(MainActivity.notes);
-//                                sharedPreferences.edit().putStringSet("notes", set).apply();
-//                            }
-//                        })
-//
-//                        .setNegativeButton("No", null)
-//                        .show();
-//
-//                return true;               // this was initially false but we change it to true as if false, the method assumes that we want to do a short click after the long click as well
-//            }
-//        });
-//    }
-    
-
-
 
